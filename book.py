@@ -39,6 +39,6 @@ def scrape_book(url):
     soup = BeautifulSoup(request(url), "html.parser")
     information = book_information(soup.findAll("tr"))
     book = Book(url, information["UPC"], soup.find("article", "product_page").h1.text, information["Price (incl. tax)"], information["Price (excl. tax)"], information["Availability"], book_description(soup.find("article").find("p", recursive=False)), soup.ul.find_all("a")[-1].text, information["Number of reviews"], soup.find("img")["src"].replace("../../", BASE_DIR))
-    print(Book)
+    print(book)
 
 scrape_book(url)
