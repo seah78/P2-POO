@@ -42,7 +42,8 @@ class Category:
             thebook.print_book()
             print("-------------------------------------------------------------")
 
-
+"""
 category = Category("http://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html")
 category.scrape_category()
 category.print_category()
+"""
